@@ -1,0 +1,1 @@
+%{HOST:verb} %{PROG:service}: %{HOST:api} %{IP:remote_ip} - - \[%{HTTPDATE:timestamp}\] "(?:%{WORD:verb} %{NOTSPACE:request}(?: HTTP/%{NUMBER:httpversion})?|%{DATA:rawrequest})" %{NUMBER:response} (?:%{NUMBER:bytes}|-) "" "(?:NING/%{NUMBER:NING})?" (?:%{GREEDYDATA}) %{IP:backend}
